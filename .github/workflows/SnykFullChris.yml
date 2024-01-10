@@ -18,7 +18,7 @@ jobs:
     - name: Install Snyk & Authenticate
       run: |
          sudo npm install -g snyk
-         snyk auth ${SNYK_TOKEN}
+         snyk auth ${{ secrets.SNYK_TOKEN }}
     # Run Snyk OS
     - name: Run Snyk OpenSource
       run: |
